@@ -16,6 +16,9 @@ import book from '@/assets/advantage/book.svg';
 import weather from '@/assets/advantage/weather.svg';
 import house from '@/assets/advantage/house.svg';
 
+import mainFeatureBg from '@/assets/main-feature-bg.jpeg';
+import example from '@/assets/example.png';
+
 export default function Home() {
   return (
     <main className='max-w-svw'>
@@ -52,26 +55,65 @@ export default function Home() {
           <AdvantageCard title="Cerita Bergambar" icon={<Image src={picture} alt="Picture" height={130} />} bgColorClass="bg-purple-600" />
         </div>
       </div>
-      <div className='flex flex-row w-full mx-10 bg-white shadow-2xl rounded-2xl p-10 mt-30'>
-        <div className='flex flex-col justify-start items-start w-fit'>
-          <div className='flex flex-col justify-start items-start w-fit'>
-            <h1 className="text-4xl font-semibold">Fitur Unggulan</h1>
-            <p className="text-xl mt-2 text-gray-700">Teknologi interaktif untuk komunikasi lebih mudah</p>
-          </div>
-          <div className='flex flex-row justify-start items-start space-x-10 w-full bg-orange-200/30 p-5 rounded-2xl mt-10'>
-          <div className='flex flex-col justify-start items-start w-1/2'>
-            <h1 className="text-xl font-bold leading-tight">Camera Translator sensor</h1>
-            <p className="text-base mt-4 text-gray-700 ">Teknologi interaktif untuk komunikasi lebih mudah</p>
-          </div>
-          <ul className='flex flex-col justify-center items-center w-1/2 space-y-5'>
-            <MainFeatureListItem>Deteksi Ekspresi</MainFeatureListItem>
-            <MainFeatureListItem>Gerakan Tubuh</MainFeatureListItem>
-            <MainFeatureListItem>Feedback Interaktif</MainFeatureListItem>
-          </ul>
-          </div>
-          <Link href="/translator" className="flex flex-row justify-center items-center space-x-10 text-xl px-8 py-3 rounded-full bg-pink-500 text-white mt-20 font-bold">Mulai<ArrowRight className='ml-5' /></Link>
-        </div>
+      <div
+  className="relative flex flex-row w-fit mx-auto shadow-2xl rounded-2xl p-10 mt-30 overflow-hidden space-x-10"
+>
+  {/* Background Image */}
+  <div
+    className="absolute z-0 inset-0 bg-cover bg-no-repeat opacity-30"
+    style={{ backgroundImage: `url(${mainFeatureBg.src})` }}
+  />
+
+  {/* Optional white overlay */}
+  <div className="absolute z-20 inset-0 bg-white/10" />
+
+  {/* Content */}
+  <div className="relative z-10 flex flex-col justify-start items-start w-fit">
+    <div className="flex flex-col justify-start items-start w-fit">
+      <h1 className="text-4xl font-semibold">Fitur Unggulan</h1>
+      <p className="text-xl mt-2 text-gray-700">
+        Teknologi interaktif untuk komunikasi lebih mudah
+      </p>
+    </div>
+
+    <div className="flex flex-row justify-start items-start space-x-10 px-5 rounded-2xl mt-10 bg-gray-100 py-8">
+      <div className="flex flex-col justify-start items-start w-1/2 ">
+        <h1 className="text-xl font-bold leading-tight ">
+          Camera Translator sensor
+        </h1>
+        <p className="text-base mt-4 text-gray-700">
+          Teknologi interaktif untuk komunikasi lebih mudah
+        </p>
       </div>
+
+      <ul className="flex flex-col justify-center items-center w-1/2 space-y-5">
+        <MainFeatureListItem>Deteksi Ekspresi</MainFeatureListItem>
+        <MainFeatureListItem>Gerakan Tubuh</MainFeatureListItem>
+        <MainFeatureListItem>Feedback Interaktif</MainFeatureListItem>
+      </ul>
+    </div>
+
+    <Link
+      href="/translator"
+      className="z-30 flex flex-row justify-center items-center space-x-10 text-xl px-8 py-3 rounded-full bg-pink-500 text-white mt-20 font-bold"
+    >
+      Mulai
+      <ArrowRight className="ml-5" />
+    </Link>
+  </div>
+  <div className="flex flex-col z-20 justify-start items-start ">
+    <Image src={example} alt="Example" className='h-full' />
+  </div> 
+  <div className="h-fit flex flex-col z-20 justify-start items-start bg-gray-100 py-10 px-8 rounded-2xl">
+    <h1 className="text-2xl font-semibold">gesture terdeteksi</h1>
+    <p className="text-9xl mt-5 text-gray-700 text-center w-full">
+      👍
+    </p>
+    <p className="text-2xl mt-5 text-gray-700 text-center w-full">
+      Bagus!
+    </p>
+  </div>
+</div>
     </main>
   );
 }
