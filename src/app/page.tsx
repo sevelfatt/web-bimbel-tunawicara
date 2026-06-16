@@ -60,12 +60,12 @@ export default function Home() {
 >
   {/* Background Image */}
   <div
-    className="absolute z-0 inset-0 bg-cover bg-no-repeat opacity-30"
+    className="absolute z-0 inset-0 bg-cover bg-no-repeat opacity-30 pointer-events-none"
     style={{ backgroundImage: `url(${mainFeatureBg.src})` }}
   />
 
   {/* Optional white overlay */}
-  <div className="absolute z-20 inset-0 bg-white/10" />
+  <div className="absolute z-20 inset-0 bg-white/10 pointer-events-none" />
 
   {/* Content */}
   <div className="relative z-10 flex flex-col justify-start items-start w-fit">
@@ -95,7 +95,7 @@ export default function Home() {
 
     <Link
       href="/translator"
-      className="z-30 flex flex-row justify-center items-center space-x-10 text-xl px-8 py-3 rounded-full bg-pink-500 text-white mt-20 font-bold"
+      className=" flex flex-row justify-center items-center space-x-10 text-xl px-8 py-3 rounded-full bg-pink-500 text-white mt-20 font-bold"
     >
       Mulai
       <ArrowRight className="ml-5" />
