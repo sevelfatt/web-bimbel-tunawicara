@@ -1,0 +1,87 @@
+import Link from 'next/link';
+import heroBg from '@/assets/hero-background.png';
+import mascot from '@/assets/mascot.png';
+import Image from 'next/image';
+import {ArrowRight } from 'lucide-react';
+import visualCommunication from '@/assets/features/visual-communication.png';
+import interactiveLearn from '@/assets/features/interactive-learning.png';
+import sensorCamera from '@/assets/features/sensor-camera.png';
+import traditionalGamification from '@/assets/features/traditional-gamification.png';
+import forAll from '@/assets/features/for-all.png';
+
+import clap from '@/assets/advantage/clap.svg';
+import walk from '@/assets/advantage/walk.svg';
+import picture from '@/assets/advantage/picture.svg';
+import book from '@/assets/advantage/book.svg';
+import weather from '@/assets/advantage/weather.svg';
+import house from '@/assets/advantage/house.svg';
+
+export default function Home() {
+  return (
+    <main className='max-w-svw'>
+      <div className="flex flex-col justify-center items-start w-full max-w-svw mt-10" style={{ backgroundImage: `url(${heroBg.src})`, backgroundRepeat: 'no-repeat', }}>
+        <div className='flex flex-row w-full justify-start items-center mt-40 ml-40 max-w-1/2'>
+          <div className='flex flex-col justify-center items-start max-w-1/2'>
+            <h1 className="text-6xl font-semibold text-green-600">TAMANASA</h1>
+            <p className="text-xl mt-2">Platform interaktif untuk anak tunawicara berbasis kearifan lokal Indonesia.</p>
+            <Link href="/translator" className="flex flex-row justify-center items-center space-x-10 text-xl px-8 py-5 rounded-full bg-pink-500 text-white mt-7 font-bold">Camera Translator<ArrowRight /></Link>
+          </div>
+          <div>
+            <Image src={mascot} alt="Hero Background" className='h-full w-full' />
+          </div>
+        </div>
+        <div className="flex flex-row w-fit justify-center items-start bg-white rounded-4xl py-10 px-30 space-x-15 mt-10 shadow-xl mx-auto">
+          <FeatureCard title="Komunikasi Visual" description="Belajar simbol dan gambar" icon={<Image src={visualCommunication} alt="Visual Communication" width={80} height={80} />} />
+          <FeatureCard title="Pembelajaran Interaktif" description="Materi Bisindo untuk anak anak" icon={<Image src={interactiveLearn} alt="Interactive Learning" width={80} height={80} />} />
+          <FeatureCard title="Gamifikasi Tradisional" description="Belajar sambil mengenal budaya" icon={<Image src={traditionalGamification} alt="Traditional Gamification" width={80} height={80} />} />
+          <FeatureCard title="Sensor Kamera" description="Deteksi gerakan & ekspresi interaktif" icon={<Image src={sensorCamera} alt="Sensor Camera" width={80} height={80} />} />
+          <FeatureCard title="Untuk Semua Umur" description="Anak, guru, orang tua,dan terapis" icon={<Image src={forAll} alt="For All" width={80} height={80} />} />
+        </div>
+      </div>
+      <div className='flex flex-col justify-center items-center w-full max-w-svw mt-30 space-y-20'>
+        <div className='flex flex-col justify-center items-center w-full max-w-1/2'>
+          <h1 className="text-3xl font-semibold">Belajar & Komunikasi</h1>
+          <p className="text-xl mt-2">Materi intensif sesuai kebutuhan anak</p>
+        </div>
+        <div className="flex flex-row justify-center items-center space-x-10 w-full">
+          <AdvantageCard title="Meningkakan kemampuan anak" icon={<Image src={book} alt="Book" height={130} />} bgColorClass="bg-yellow-400" />
+          <AdvantageCard title="Kebutuhan sehari-hari" icon={<Image src={weather} alt="Weather" height={130} />} bgColorClass="bg-blue-500" />
+          <AdvantageCard title="Pelajaran Bahasa Indonesia" icon={<Image src={clap} alt="Clap" height={130} />} bgColorClass="bg-teal-500" />
+          <AdvantageCard title="Tempat & Lingkungan" icon={<Image src={house} alt="House" height={130} />} bgColorClass="bg-rose-500" />
+          <AdvantageCard title="Kegiatan & Pantauan anak" icon={<Image src={walk} alt="Walk" height={130} />} bgColorClass="bg-sky-300" />
+          <AdvantageCard title="Cerita Bergambar" icon={<Image src={picture} alt="Picture" height={130} />} bgColorClass="bg-purple-600" />
+        </div>
+      </div>
+      <div className='flex flex-row w-full mx-10 bg-white shadow-2xl rounded-2xl p-10 mt-30'>
+        <div className='flex flex-col justify-start items-start w-fit'>
+          <div className='flex flex-col justify-start items-start w-fit'>
+            <h1 className="text-4xl font-semibold">Fitur Unggulan</h1>
+            <p className="text-xl mt-2 text-gray-700">Teknologi interaktif untuk komunikasi lebih mudah</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+
+function FeatureCard({title, description, icon}: {title: string, description: string, icon: React.ReactNode}) {
+  return (
+    <div className="flex flex-col justify-center text-center items-center space-y-2 max-w-[200px]">
+      {icon}
+      <h2 className="text-xl font-bold px-7">{title}</h2>
+      <p className="text-xl px-2">{description}</p>
+    </div>
+  );
+}
+
+function AdvantageCard({title, icon, bgColorClass}: {title: string, icon: React.ReactNode, bgColorClass: string}) {
+  return (
+    <div className={`py-8 px-4 rounded-3xl flex flex-col justify-center text-center items-center space-y-4 ${bgColorClass} transition-all duration-300 hover:translate-y-[-20px]`}>
+      {icon}
+      <div className="h-14 flex items-center justify-center">
+        <h2 className="text-white text-xl font-bold px-2 max-w-[190px] line-clamp-2">{title}</h2>
+      </div>
+    </div>
+  );
+}
