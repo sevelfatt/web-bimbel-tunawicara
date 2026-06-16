@@ -2,7 +2,7 @@ import Link from 'next/link';
 import heroBg from '@/assets/hero-background.png';
 import mascot from '@/assets/mascot.png';
 import Image from 'next/image';
-import {ArrowRight } from 'lucide-react';
+import {ArrowRight, Check } from 'lucide-react';
 import visualCommunication from '@/assets/features/visual-communication.png';
 import interactiveLearn from '@/assets/features/interactive-learning.png';
 import sensorCamera from '@/assets/features/sensor-camera.png';
@@ -58,6 +58,18 @@ export default function Home() {
             <h1 className="text-4xl font-semibold">Fitur Unggulan</h1>
             <p className="text-xl mt-2 text-gray-700">Teknologi interaktif untuk komunikasi lebih mudah</p>
           </div>
+          <div className='flex flex-row justify-start items-start space-x-10 w-full bg-orange-200/30 p-5 rounded-2xl mt-10'>
+          <div className='flex flex-col justify-start items-start w-1/2'>
+            <h1 className="text-xl font-bold leading-tight">Camera Translator sensor</h1>
+            <p className="text-base mt-4 text-gray-700 ">Teknologi interaktif untuk komunikasi lebih mudah</p>
+          </div>
+          <ul className='flex flex-col justify-center items-center w-1/2 space-y-5'>
+            <MainFeatureListItem>Deteksi Ekspresi</MainFeatureListItem>
+            <MainFeatureListItem>Gerakan Tubuh</MainFeatureListItem>
+            <MainFeatureListItem>Feedback Interaktif</MainFeatureListItem>
+          </ul>
+          </div>
+          <Link href="/translator" className="flex flex-row justify-center items-center space-x-10 text-xl px-8 py-3 rounded-full bg-pink-500 text-white mt-20 font-bold">Mulai<ArrowRight className='ml-5' /></Link>
         </div>
       </div>
     </main>
@@ -83,5 +95,14 @@ function AdvantageCard({title, icon, bgColorClass}: {title: string, icon: React.
         <h2 className="text-white text-xl font-bold px-2 max-w-[190px] line-clamp-2">{title}</h2>
       </div>
     </div>
+  );
+}
+
+function MainFeatureListItem({children}: {children: React.ReactNode}) {
+  return (
+<li className="flex flex-row justify-start items-center w-full text-lg font-semibold">
+  <Check className='w-8 h-8 mr-3 border-2 rounded-full'/>
+  {children}
+</li>
   );
 }
