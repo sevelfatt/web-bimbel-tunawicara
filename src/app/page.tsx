@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import heroBg from '@/assets/hero-background.png';
 import mascot from '@/assets/mascot.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import {ArrowRight, Check } from 'lucide-react';
 import visualCommunication from '@/assets/features/visual-communication.png';
 import interactiveLearn from '@/assets/features/interactive-learning.png';
@@ -18,6 +18,13 @@ import house from '@/assets/advantage/house.svg';
 
 import mainFeatureBg from '@/assets/main-feature-bg.jpeg';
 import example from '@/assets/example.png';
+
+import testimonialBg from '@/assets/testimonial-bg.png';
+
+import community from '@/assets/testimonial/community.png';
+import card from '@/assets/testimonial/card.png';
+import console from '@/assets/testimonial/console.png';
+import building from '@/assets/testimonial/building.png';
 
 export default function Home() {
   return (
@@ -114,10 +121,61 @@ export default function Home() {
     </p>
   </div>
 </div>
+<div className="relative w-full overflow-hidden mt-30" style={{ backgroundImage: `url(${testimonialBg.src})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+
+  {/* Content */}
+  <div className="relative z-10 flex flex-col justify-center items-center h-full space-y-25">
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="text-5xl font-bold">Kata mereka</h1>
+      <p className="text-31xl mt-2 text-gray-700">
+        Dari teman Tamanasa
+      </p>
+    </div>
+    <div className="flex flex-col justify-center items-center space-y-[150px]">
+      <div className="flex flex-row justify-center items-center space-x-10">
+      <TestimonialCard name="Ibu ana siti fatimah" subTitle="Orang tua " comment="“Tamanasa sangat membantu anak saya belajar berkomunikasi melalui bisindo dan materi materi yang diajarkan, juga tamanasa memiliki cara yang menyenangkan untuk anka anak belajar”" picture={mascot} />
+      <TestimonialCard name="Ibu ana siti fatimah" subTitle="Orang tua " comment="“Tamanasa sangat membantu anak saya belajar berkomunikasi melalui bisindo dan materi materi yang diajarkan, juga tamanasa memiliki cara yang menyenangkan untuk anka anak belajar”" picture={mascot} />
+      <TestimonialCard name="Ibu ana siti fatimah" subTitle="Orang tua " comment="“Tamanasa sangat membantu anak saya belajar berkomunikasi melalui bisindo dan materi materi yang diajarkan, juga tamanasa memiliki cara yang menyenangkan untuk anka anak belajar”" picture={mascot} />
+    </div>
+    <div className="flex flex-row justify-center items-center space-x-20 mb-16">
+      <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={community} bgColorClass="bg-blue-500" />
+      <TestimonialSummaryCard title="100+" summary='Materi interaktif' icon={card} bgColorClass="bg-green-600" />
+      <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={console} bgColorClass="bg-yellow-500" />
+      <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={building} bgColorClass="bg-rose-500" />
+      </div>
+    </div>
+  </div>
+</div>
     </main>
   );
 }
 
+function TestimonialSummaryCard({title, summary, icon, bgColorClass}: {title: string, summary: string, icon: StaticImageData, bgColorClass: string}) {
+  return (
+    <div className={`flex flex-col justify-center items-center space-y-6 rounded-4xl max-w-md shadow-xl p-10 text-white ${bgColorClass}`}>
+      <div className='flex flex-row w-full space-x-9 justify-start items-center'>
+        <Image src={icon} width={55} alt="Icon"/>
+        <h2 className="text-2xl font-semibold">{title}</h2>
+      </div>
+      <p className="text-2xl px-2">{summary}</p>
+    </div>
+  );
+}
+
+function TestimonialCard({name, subTitle, comment, picture}: {name: string, subTitle: string, comment: string, picture: StaticImageData}) {
+  return (
+    <div className="flex flex-col justify-center items-center space-y-6 bg-white rounded-4xl max-w-md shadow-xl p-5">
+      <div className='flex flex-row w-full space-x-9 justify-start items-center'>
+      <Image src={picture} alt="Mascot" width={100} height={100} />
+      <div className='flex flex-col'>
+        <h2 className="text-xl font-bold px-2">{name}</h2>
+        <p className="text-base px-2">{subTitle}</p>
+      </div>
+      </div>
+      <p className="text-base px-2">{comment}</p>
+    </div>
+  );
+}
 
 function FeatureCard({title, description, icon}: {title: string, description: string, icon: React.ReactNode}) {
   return (
