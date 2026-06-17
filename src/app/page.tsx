@@ -134,10 +134,10 @@ export default function Home() {
     <div className="flex flex-col justify-center items-center space-y-[150px]">
       <div className="flex flex-row justify-center items-center space-x-10">
       <TestimonialCard name="Ibu ana siti fatimah" subTitle="Orang tua " comment="“Tamanasa sangat membantu anak saya belajar berkomunikasi melalui bisindo dan materi materi yang diajarkan, juga tamanasa memiliki cara yang menyenangkan untuk anka anak belajar”" picture={mascot} />
-      <TestimonialCard name="Ibu ana siti fatimah" subTitle="Orang tua " comment="“Tamanasa sangat membantu anak saya belajar berkomunikasi melalui bisindo dan materi materi yang diajarkan, juga tamanasa memiliki cara yang menyenangkan untuk anka anak belajar”" picture={mascot} />
-      <TestimonialCard name="Ibu ana siti fatimah" subTitle="Orang tua " comment="“Tamanasa sangat membantu anak saya belajar berkomunikasi melalui bisindo dan materi materi yang diajarkan, juga tamanasa memiliki cara yang menyenangkan untuk anka anak belajar”" picture={mascot} />
+      <TestimonialCard name="bunda via" subTitle="Orang tua " comment="“Semenjak anak saya memakai Tamanasa untuk berkomunikasi dengan teman temannya, mereka jadi lebih dekat dan anak saya jadi lebih bersemangat pas main sama temen temennya”" picture={mascot} />
+      <TestimonialCard name="Kiki kurniawati hamid" subTitle="guru SLB " comment="“Anak-anak sangat suka dengan fitur makera sensornya, mereka selalu bermain menggunakan translator itu dan mereka bisa berkomunikasi dengan lancar”" picture={mascot} />
     </div>
-    <div className="flex flex-row justify-center items-center space-x-20 mb-16">
+    <div className="flex flex-row justify-center items-center space-x-22 mb-22">
       <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={community} bgColorClass="bg-blue-500" />
       <TestimonialSummaryCard title="100+" summary='Materi interaktif' icon={card} bgColorClass="bg-green-600" />
       <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={console} bgColorClass="bg-yellow-500" />
@@ -152,10 +152,10 @@ export default function Home() {
 
 function TestimonialSummaryCard({title, summary, icon, bgColorClass}: {title: string, summary: string, icon: StaticImageData, bgColorClass: string}) {
   return (
-    <div className={`flex flex-col justify-center items-center space-y-6 rounded-4xl max-w-md shadow-xl p-10 text-white ${bgColorClass}`}>
+    <div className={`flex flex-col justify-center items-center space-y-6 rounded-4xl max-w-md px-15 py-10 text-white ${bgColorClass}`}>
       <div className='flex flex-row w-full space-x-9 justify-start items-center'>
         <Image src={icon} width={55} alt="Icon"/>
-        <h2 className="text-2xl font-semibold">{title}</h2>
+        <h2 className="text-3xl font-semibold">{title}</h2>
       </div>
       <p className="text-2xl px-2">{summary}</p>
     </div>
@@ -172,7 +172,7 @@ function TestimonialCard({name, subTitle, comment, picture}: {name: string, subT
         <p className="text-base px-2">{subTitle}</p>
       </div>
       </div>
-      <p className="text-base px-2">{comment}</p>
+      <p className="text-base px-2 text-center">{comment}</p>
     </div>
   );
 }
