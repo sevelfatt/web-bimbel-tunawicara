@@ -26,6 +26,11 @@ import card from '@/assets/testimonial/card.png';
 import console from '@/assets/testimonial/console.png';
 import building from '@/assets/testimonial/building.png';
 
+import culturalTasa from '@/assets/cultural-tasa.png';
+import previewGame from '@/assets/preview-game.png';
+
+import trophy from '@/assets/trophy.svg';
+
 export default function Home() {
   return (
     <main className='max-w-svw'>
@@ -142,10 +147,41 @@ export default function Home() {
       <TestimonialSummaryCard title="100+" summary='Materi interaktif' icon={card} bgColorClass="bg-green-600" />
       <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={console} bgColorClass="bg-yellow-500" />
       <TestimonialSummaryCard title="500+" summary='Anak terbantu' icon={building} bgColorClass="bg-rose-500" />
-      </div>
     </div>
   </div>
 </div>
+</div>
+      <div className='flex flex-col justify-center items-center w-full max-w-svw mt-30 space-y-20'>
+        <div className='flex flex-col justify-center items-center w-full max-w-1/2'>
+          <h1 className="text-5xl font-semibold">Game Tradisional</h1>
+          <p className="text-2xl mt-2">Bermain sambil mengenal budaya Indonesia</p>
+        </div>
+        <div className='flex flex-col space-y-10'>
+        <div className='flex flex-row justify-center items-center space-x-2 p-10 rounded-4xl bg-white shadow-2xl'>
+          <div className='flex flex-col justify-start items-start'>
+            <div>
+            <h1 className='text-3xl font-semibold'>Berpetualang Bersama Tasa</h1>
+            <p className='text-xl max-w-2/3 mt-4'>Selesaikan misi-misi nya dan kamu akan jadi pemenang</p>
+            </div>
+            <div className='flex flex-row justify-center items-end space-x-28'>
+              <Link href="/game" className="text-xl px-9 py-4 rounded-full bg-rose-500 text-white font-semibold">Lihat semua</Link>
+              <Image src={culturalTasa} alt="Tasa" width={250} height={250} />
+            </div>
+          </div>
+            <Image src={previewGame} alt="Preview Game" height={336} />
+        </div>
+        <div className='flex flex-row bg-purple-500 text-white w-full h-fit py-5 px-10 mx-auto rounded-2xl justify-between'>
+          <div className='flex flex-row space-x-10'>
+            <Image src={trophy} alt="Trophy" height={60} />
+            <div className='flex flex-col'>
+              <h1 className="text-2xl font-semibold">Kumpulkan dan Selesaikan Misi!</h1>
+              <p className="text-xl">Belajar, Bermain, dan Jadi juara!</p>
+            </div>
+          </div>
+          <Link href="/game" className='text-xl px-9 py-4 rounded-full text-black bg-white font-semibold'>Lihat prestasi</Link>
+        </div>
+        </div>
+      </div>
     </main>
   );
 }
