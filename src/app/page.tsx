@@ -16,6 +16,9 @@ import book from '@/assets/advantage/book.svg';
 import weather from '@/assets/advantage/weather.svg';
 import house from '@/assets/advantage/house.svg';
 
+import decoration1 from '@/assets/decoration-1.png';
+
+
 import mainFeatureBg from '@/assets/main-feature-bg.jpeg';
 import example from '@/assets/example.png';
 
@@ -30,6 +33,12 @@ import culturalTasa from '@/assets/cultural-tasa.png';
 import previewGame from '@/assets/preview-game.png';
 
 import trophy from '@/assets/trophy.svg';
+
+import pelajaranBg from '@/assets/pelajaran-bg.png';
+import pelajaran1 from '@/assets/pelajaran-1.png';
+import pelajaran2 from '@/assets/pelajaran-2.png';
+
+import tentangMascot from '@/assets/tentang-mascot.png';
 
 export default function Home() {
   return (
@@ -130,11 +139,15 @@ export default function Home() {
 
   {/* Content */}
   <div className="relative z-10 flex flex-col justify-center items-center h-full space-y-25">
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-5xl font-bold">Kata mereka</h1>
-      <p className="text-31xl mt-2 text-gray-700">
-        Dari teman Tamanasa
-      </p>
+    <div className='flex flex-row justify-between items-center w-full px-10'>
+      <Image src={decoration1} alt="Decoration 1" className='h-[70px] w-auto scale-x-[-1]' />
+      <div className="flex flex-col justify-center items-center w-full">
+        <h1 className="text-5xl font-bold">Kata mereka</h1>
+        <p className="text-31xl mt-2 text-gray-700">
+          Dari teman Tamanasa
+        </p>
+      </div>
+      <Image src={decoration1} alt="Decoration 2" className='h-[70px] w-auto' />
     </div>
     <div className="flex flex-col justify-center items-center space-y-[150px]">
       <div className="flex flex-row justify-center items-center space-x-10">
@@ -180,6 +193,24 @@ export default function Home() {
           </div>
           <Link href="/game" className='text-xl px-9 py-4 rounded-full text-black bg-white font-semibold'>Lihat prestasi</Link>
         </div>
+        </div>
+      </div>
+      <div className='flex flex-col justify-center items-center py-72 text-white mt-30' style={{ backgroundImage: `url(${pelajaranBg.src})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <h2 className='text-5xl font-semibold'>Pelajaran</h2>
+        <p className='text-xl mt-2'>Untuk anak-anak</p>
+        <div className='flex flex-row justify-center items-center space-x-10 my-20'>
+          <Image src={pelajaran1} alt="Pelajaran 1"  height={425} className='transition duration-200 hover:scale-110' />
+          <Image src={pelajaran2} alt="Pelajaran 2"  height={425} className='transition duration-200 hover:scale-110' />
+        </div>
+      </div>
+      <div className='flex flex-row w-fit justify-center items-end mx-40 mt-30'>
+        <Image src={tentangMascot} alt="Tentang Mascot" height={525} />
+        <div className='flex flex-col w-2/3'>
+          <h1 className='text-4xl font-semibold'>Tentang Tamanasa</h1>
+          <p className='text-2xl mt-9'>TAMANASA merupakan website edukasi inklusif yang menggabungkan komunikasi visual, pembelajaran adaptif, dan gamifikasi kearifan lokal untuk membantu anak tunarungu belajar dengan lebih interaktif. Melalui permainan tradisional dan budaya Nusantara, TAMANASA mendukung pendidikan inklusif sekaligus pelestarian budaya Indonesia hingga wilayah 3T.</p>
+          <div className='flex flex-row justify-end mx-10 mt-20'>
+            <Image src={decoration1} alt="Decoration 1" className='h-[40px] w-fit' />
+          </div>
         </div>
       </div>
     </main>
