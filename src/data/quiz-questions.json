@@ -1,0 +1,117 @@
+{
+  "sumatera": {
+    "title": "Sumatera",
+    "questions": [
+      {
+        "id": "s1",
+        "question": "Rumah adat asal daerah Sumatera Barat yang atapnya menyerupai tanduk kerbau disebut...",
+        "options": ["Rumah Gadang", "Rumah Limas", "Rumah Bolon", "Rumah Joglo"],
+        "answer": "Rumah Gadang"
+      },
+      {
+        "id": "s2",
+        "question": "Senjata tradisional khas daerah Provinsi Aceh yang melengkung adalah...",
+        "options": ["Kujang", "Rencong", "Keris", "Mandau"],
+        "answer": "Rencong"
+      },
+      {
+        "id": "s3",
+        "question": "Tari piring merupakan tarian tradisional yang sangat populer dari daerah...",
+        "options": ["Sumatera Barat", "Sumatera Utara", "Riau", "Jambi"],
+        "answer": "Sumatera Barat"
+      }
+    ]
+  },
+  "jawa": {
+    "title": "Jawa",
+    "questions": [
+      {
+        "id": "j1",
+        "question": "Gamelan merupakan alat musik tradisional yang banyak berkembang di pulau...",
+        "options": ["Jawa", "Sumatera", "Kalimantan", "Papua"],
+        "answer": "Jawa"
+      },
+      {
+        "id": "j2",
+        "question": "Rumah adat khas Jawa Tengah yang memiliki atap berbentuk tajug disebut...",
+        "options": ["Rumah Joglo", "Rumah Kebaya", "Rumah Limas", "Rumah Gapura Candi Bentar"],
+        "answer": "Rumah Joglo"
+      },
+      {
+        "id": "j3",
+        "question": "Tokoh pewayangan yang termasuk dalam kelompok Punokawan adalah...",
+        "options": ["Semar", "Arjuna", "Gatotkaca", "Yudhistira"],
+        "answer": "Semar"
+      }
+    ]
+  },
+  "kalimantan": {
+    "title": "Kalimantan",
+    "questions": [
+      {
+        "id": "k1",
+        "question": "Senjata tradisional khas suku Dayak di Kalimantan adalah...",
+        "options": ["Mandau", "Rencong", "Kujang", "Celurit"],
+        "answer": "Mandau"
+      },
+      {
+        "id": "k2",
+        "question": "Tari Enggang merupakan tarian tradisional dari Kalimantan Timur yang terinspirasi oleh...",
+        "options": ["Burung Enggang", "Harimau Kalimantan", "Sungai Mahakam", "Pohon Ulin"],
+        "answer": "Burung Enggang"
+      },
+      {
+        "id": "k3",
+        "question": "Rumah adat suku Dayak yang memanjang dan dapat dihuni banyak keluarga disebut...",
+        "options": ["Rumah Betang (Lamin)", "Rumah Tongkonan", "Rumah Honai", "Rumah Gadang"],
+        "answer": "Rumah Betang (Lamin)"
+      }
+    ]
+  },
+  "sulawesi": {
+    "title": "Sulawesi",
+    "questions": [
+      {
+        "id": "sl1",
+        "question": "Kapal layar tradisional legendaris yang berasal dari suku Bugis/Makassar di Sulawesi Selatan adalah...",
+        "options": ["Kapal Pinisi", "Perahu Kora-kora", "Kapal Jung", "Perahu Cadik"],
+        "answer": "Kapal Pinisi"
+      },
+      {
+        "id": "sl2",
+        "question": "Rumah adat suku Toraja yang memiliki atap berbentuk perahu atau tanduk kerbau disebut...",
+        "options": ["Rumah Tongkonan", "Rumah Souraja", "Rumah Banua Mada", "Rumah Joglo"],
+        "answer": "Rumah Tongkonan"
+      },
+      {
+        "id": "sl3",
+        "question": "Tarian penyambutan tamu agung di Sulawesi Selatan yang penarinya membawa kotak berisi sirih pinang bernama...",
+        "options": ["Tari Pakarena", "Tari Paduppa Bosara", "Tari Kipas", "Tari Ma'gellu"],
+        "answer": "Tari Paduppa Bosara"
+      }
+    ]
+  },
+  "papua": {
+    "title": "Papua",
+    "questions": [
+      {
+        "id": "p1",
+        "question": "Rumah adat khas Papua yang berbentuk lingkaran dengan atap jerami/ilalang adalah...",
+        "options": ["Rumah Honai", "Rumah Tongkonan", "Rumah Tambi", "Rumah Karapao"],
+        "answer": "Rumah Honai"
+      },
+      {
+        "id": "p2",
+        "question": "Alat musik petik tradisional khas Papua Timur Tengah (dan Maluku) yang dimainkan dengan cara ditabuh adalah...",
+        "options": ["Tifa", "Sasando", "Angklung", "Gamolan"],
+        "answer": "Tifa"
+      },
+      {
+        "id": "p3",
+        "question": "Tarian perang tradisional masyarakat Papua yang melambangkan kepahlawanan dan keberanian disebut...",
+        "options": ["Tari Perang Papua", "Tari Yospan", "Tari Sajojo", "Tari Musyoh"],
+        "answer": "Tari Perang Papua"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+﻿  console.error
+    A component suspended inside an `act` scope, but the `act` call was not awaited. When testing React components that depend on asynchronous data, you must await the result:
+    
+    await act(() => ...)
+
+      at node_modules/react/cjs/react.development.js:890:23
+      at invokeTheCallbackFunction (node_modules/jsdom/lib/jsdom/living/generated/Function.js:19:26)
+      at node_modules/jsdom/lib/jsdom/browser/Window.js:613:9
+
